@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'VAGRoundedBold';
+    font-weight: 400;
+    font-style: normal;
+    src: url("vagrb__-webfont.eot");
+    src: local('☺'),url("vagrb__-webfont.woff") format('woff'),url("vagrb__-webfont.ttf") format('truetype'),url("vagrb__-webfont.svg#webfontt8Wnl7l2") format('svg')
+}
+
+@font-face {
+    font-family: 'VAGRoundedStdThin';
+    font-weight: normal;
+    font-style: normal;
+    src: url('vagroundedstd-thin-webfont.eot');
+    src: url('vagroundedstd-thin-webfont.eot?#iefix') format('eot'),
+            url('vagroundedstd-thin-webfont.woff') format('woff'),
+            url('vagroundedstd-thin-webfont.ttf') format('truetype'),
+            url('vagroundedstd-thin-webfont.svg#webfontjNhQhvfZ') format('svg');
+}

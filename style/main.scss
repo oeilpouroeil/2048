@@ -1,5 +1,6 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
+@import "fonts/vagrounded.css";
 
 $field-width: 500px;
 $grid-spacing: 15px;
@@ -9,38 +10,102 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$medium-threshold: 800px;
 
-$tile-color: #eee4da;
-$tile-gold-color: #edc22e;
-$tile-gold-glow-color: lighten($tile-gold-color, 15%);
+$text-color: #FFF;
+$bright-text-color: #1b2630;
+
+$tile-color: #000000;
+$tile-gold-color: #1b2630;
+$tile-gold-glow-color: #1b2630;
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0;
+$game-container-background: #1b2630;
 
-$transition-speed: 100ms;
+$opo-color: #97D4D9;
+$opo-darken-color: #1b2630;
+
+$transition-speed: 200ms;
+
+#header {
+    width: 100%;
+    height: 40px;
+    background-color: $opo-darken-color;
+    position: relative;
+}
+#header h1 {
+    font-family: 'VAGRoundedBold';
+    margin: 0;
+    padding: 4px 0 0 0;
+    padding-top: 6px;
+    font-size: 1.33em;
+}
+
+.logo {
+    height: 80%;
+    margin: 3px 11px;
+}
+#header .logo {
+    float: left;
+}
+#header .socials {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#header .socials .fb-share-button {
+    top: -5px;
+    margin-right: 5px
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #FFF;
+    height: 40px;
+    width: 100%;
+    color: #1b2630;
+    text-align: right;
+    overflow: hidden;
+}
+
+#footer p{
+    position: absolute;
+    left: 10px;
+    width: 80%;
+    text-align : left;
+    font-size: 10px;
+    padding-top: 10px;
+}
+#footer .logo{
+    margin-right: 5px;
+}
+
+#footer a{
+    color: #1b2630;
+}
 
 html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: $opo-color;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
+  position:relative;
 }
 
-body {
-  margin: 80px 0;
-}
+
 
 .heading {
   @include clearfix;
 }
 
 h1.title {
-  font-size: 80px;
+  font-family: 'VAGRoundedBold';
+  font-size: 60px;
   font-weight: bold;
   margin: 0;
   display: block;
@@ -76,7 +141,7 @@ h1.title {
   line-height: $height + 22px;
   font-weight: bold;
   border-radius: 3px;
-  color: white;
+  color: $opo-color;
   margin-top: 8px;
   text-align: center;
 
@@ -89,7 +154,7 @@ h1.title {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: $tile-color;
+    color: $opo-color;
   }
 
   .score-addition {
@@ -142,7 +207,8 @@ hr {
 
 .container {
   width: $field-width;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding-bottom: 50px;
 }
 
 @include keyframes(fade-in) {
@@ -158,7 +224,7 @@ hr {
 // Styles for buttons
 @mixin button {
   display: inline-block;
-  background: darken($game-container-background, 20%);
+  background: darken($opo-color, 20%);
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
@@ -276,11 +342,17 @@ hr {
 
     border-radius: $tile-border-radius;
 
-    background: rgba($tile-color, .35);
+    background: $tile-color;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .tile-inner img {
+    border-radius: $tile-border-radius;
+    width: 100%;
+    height:100%;
   }
 
   .tile-container {
@@ -367,11 +439,11 @@ hr {
       }
 
       @if $bright-color {
-        color: $bright-text-color;
+        //color: $bright-text-color;
       }
 
       // Set background
-      background: $mixed-background;
+      //background: $mixed-background;
 
       // Add glow
       $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
@@ -434,6 +506,7 @@ hr {
 @include keyframes(pop) {
   0% {
     @include transform(scale(0));
+    opacity: 0;
   }
 
   50% {
@@ -442,6 +515,7 @@ hr {
 
   100% {
     @include transform(scale(1));
+    opacity: 1;
   }
 }
 
@@ -456,6 +530,7 @@ hr {
 }
 
 .game-intro {
+font-family: 'VAGRoundedStdThin';
   float: left;
   line-height: 42px;
   margin-bottom: 0;
@@ -486,8 +561,8 @@ hr {
   }
 
   body {
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0;
   }
 
   h1.title {
@@ -498,6 +573,7 @@ hr {
   .container {
     width: $field-width;
     margin: 0 auto;
+    padding-top: 10px;
   }
 
   .score-container, .best-container {
@@ -547,3 +623,4 @@ hr {
     }
   }
 }
+

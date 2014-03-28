@@ -12,11 +12,39 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:title" content="OPO48 - Oeil pour Oeil">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.oeilpouroeil.fr/opo48">
+  <meta property="og:image" content="http://www.oeilpouroeil.fr/opo48/images/share.png">
+  <meta property="og:description" content="Déplace les yeux et obtiens le OPOuvoir!">
+  <meta property="og:locale" content="fr_FR">
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55224-16']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 <body>
+  <div id="header">
+    <img src="./images/logo.png" class="logo" alt="{{ title }}" />
+    <h1>OPO48</h1>
+   <!--  <div class="socials">
+        <div class="fb-share-button" data-href="http://estcequecestlheuredejouer.fr" data-type="button_count"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="fr" data-hashtags="estCeQueCestLheureDeJouer">Tweeter</a>
+        <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+    </div> -->
+  </div>
   <div class="container">
     <div class="heading">
-      <h1 class="title">2048</h1>
+      <h1 class="title">OPO48</h1>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
@@ -24,7 +52,7 @@
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <p class="game-intro">Déplace les yeux et obtiens le <strong>OPOuvoir!</strong></p>
       <a class="restart-button">New Game</a>
     </div>
 
@@ -32,8 +60,8 @@
       <div class="game-message">
         <p></p>
         <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+	        <a class="keep-playing-button">Continuer</a>
+          <a class="retry-button">Rejouer</a>
         </div>
       </div>
 
@@ -70,18 +98,30 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">Comment jouer:</strong><br/> Utilise les <strong>flèches du clavier</strong> pour déplacer les yeux. Quand deux yeux identiques se rencontrent, ils se <strong>transforment!</strong>
     </p>
-    <hr>
-    <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
-    </p>
-    <hr>
-    <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-    </p>
+    
   </div>
 
+  <div id="footer">
+  <p>
+    Improved by <a href="http://www.oeilpouroeil.fr" target="_blank">OPO</a>. Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+      <a href="http://www.oeilpouroeil.fr" target="_blank"><img src="./images/creator.png" class="logo" alt="{{ creators | raw }}" /></a>
+  </div>
+
+  <!--  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=251719671666609";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js">
+      {lang: 'fr'}
+    </script> -->
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
